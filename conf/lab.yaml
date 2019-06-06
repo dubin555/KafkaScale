@@ -1,0 +1,21 @@
+runmode: release
+#addr: 8093
+log:
+  writers: stdout
+  logger_level: DEBUG
+  logger_file: log/kafkaScale.log
+  log_format_text: true
+  rollingPolicy: size
+  log_rotate_date: 1
+  log_rotate_size: 1
+  log_backup_count: 7
+
+db:
+  addr: 10.29.42.47:6379
+
+zk:
+  addr:
+    - sap-zookeeper1:2181
+    - sap-zookeeper2:2181
+    - sap-zookeeper3:2181
+  path: /KafkaScale/services

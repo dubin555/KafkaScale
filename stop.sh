@@ -1,0 +1,1 @@
+ps aux | grep KafkaScale | awk '{print $2}' | xargs kill -s 9
